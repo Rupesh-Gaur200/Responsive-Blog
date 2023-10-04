@@ -16,8 +16,15 @@ function Navbar(){
              </li>
 
              <li className='hover:scale-125 duration-300 cursor-pointer'>
+                      <Link to="/Allbogs">All bogs</Link>
+
+             </li>
+
+             <li className='hover:scale-125 duration-300 cursor-pointer'>
                 <Link to ="/Create">Create</Link>
              </li>
+
+             
     
           </ul>
           </div>
