@@ -1,13 +1,33 @@
-import { useState } from 'react'
 
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider
+} from 'react-router-dom'
+
+import Navbar from './Component/Navbar';
+import Home from './Component/Home'
+import Trending from './Component/Trending'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+
+  const router=createBrowserRouter(createRoutesFromElements(
+    <Route element={<Navbar/>}>
+       <Route path='/' element={<Home/>}/>
+       <Route path='/Trending' element={<Trending/>}/>
+      
+
+    </Route>
+  ))
 
   return (
     <>
-      <h1 text>Blog-Sites</h1>
+      <RouterProvider router={router}/> 
+    
+    
     </>
   )
 }
