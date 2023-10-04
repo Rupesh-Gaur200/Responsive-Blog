@@ -9,6 +9,7 @@ import {
 import Navbar from './Component/Navbar';
 import Home from './Component/Home'
 import Trending from './Component/Trending'
+import Create from './Component/Create';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     <Route element={<Navbar/>}>
        <Route path='/' element={<Home/>}/>
        <Route path='/Trending' element={<Trending/>}/>
-      
+      <Route path='/Create' element={<Create></Create>}></Route>
 
     </Route>
   ))
